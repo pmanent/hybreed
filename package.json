@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Hybreed",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "serve": "webpack-dev-server --open",
+    "watch": "webpack --watch"
   },
   "author": "atSistemas",
   "license": "MIT",

@@ -24,8 +24,9 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: "[name].js",
-    publicPath: "./"
+    publicPath: "/"
   },
+  watch: true,
   module: {
     rules: [
 
@@ -63,9 +64,9 @@ module.exports = {
       })
 
     ],
-   devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      compress: true,
-      port: 9000
+    devtool: 'inline-source-map',
+
+    devServer: {
+        contentBase: './dist'
     }
 };
