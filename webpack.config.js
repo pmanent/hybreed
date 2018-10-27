@@ -24,16 +24,12 @@ module.exports = {
   output: {
     path: __dirname + '/dist',
     filename: "[name].js",
-    publicPath: "dist/"
+    publicPath: "./"
   },
-  devtool: "source-map", // any "source-map"-like devtool is possible
   module: {
     rules: [
 
-      {
-          test: /\.ttf/,
-          use: 'raw-loader'
-      },
+
       {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,
@@ -58,9 +54,6 @@ module.exports = {
             title: 'My App',
             template: 'src/index.html'
           }),
-      new CopyWebpackPlugin([
-          { from: 'src/fonts/**/*.ttf', to: './', force: true }
-        ]),
 
       new MiniCssExtractPlugin({
         // Options similar to the same options in webpackOptions.output
