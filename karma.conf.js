@@ -1,9 +1,12 @@
 // Karma configuration
 'use strict'
 
+var webpackConfig = require('./webpack.config.js');
+webpackConfig.entry = {};
+
 module.exports = function (config) {
   //let customBrowsers = ['Chrome', 'Safari', 'Firefox', 'PhantomJS']
-  let customBrowsers = ['PhantomJS']
+  let customBrowsers = ['Chrome']
 
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -39,8 +42,8 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'src/**/*.js': ['browserify'],
-      'test/js/*.spec.js': ['browserify']
+      'src/**/*.js': ['webpack'],
+      'test/js/*.spec.js': ['webpack']
     },
 
     // Browserify configuration
@@ -106,6 +109,12 @@ module.exports = function (config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
+    concurrency: Infinity,
+
+    webpack: webpackConfig,
+
+    webpackMiddleware: {
+      noInfo: true
+    }
   })
 }

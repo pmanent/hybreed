@@ -26,7 +26,7 @@ module.exports = {
       pathToMainJs,
       pathToMainScss
   ],
-  mode: "production",
+  mode: "development",
   output: {
     path: __dirname + '/dist',
     filename: "[name].js",
@@ -35,16 +35,6 @@ module.exports = {
   watch: false,
   module: {
     rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader",
-        options: {
-          // eslint options (if necessary)
-          // community formatter
-          formatter: require("eslint-friendly-formatter"),
-        }
-      },
       {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,
