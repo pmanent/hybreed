@@ -20,7 +20,7 @@ function showLoginView() {
         login(user, password) {
             console.log(`Login with ${user} ${password}`);
             localStorage.login = user;
-            Broker.channel('itemsList').trigger('start');
+            Broker.channel('instagramProfiles').trigger('start');
         }
     });
 }

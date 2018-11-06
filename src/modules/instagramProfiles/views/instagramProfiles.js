@@ -1,6 +1,6 @@
 import {_, Marionette} from '~/src/vendor/libs';
-import ItemTemplate from './item.html';
-import ItemsListTemplate from './itemsList.html';
+import ItemTemplate from './instagramProfile.html';
+import ItemsListTemplate from './instagramProfiles.html';
 
 var ChildView = Marionette.View.extend({
 

@@ -1,15 +1,18 @@
-import ExampleController from '~/src/modules/example';
-import ItemsListController from '~/src/modules/itemsList';
+
+import InstagramProfiles from '~/src/modules/instagramProfiles';
 import LoginController from '~/src/modules/login';
 import MainController from '~/src/modules/main';
 import MenuController from '~/src/modules/menu';
 import ScreenController from '~/src/modules/screen';
 
+import CmsController from '~/src/modules/CMS';
+
+
 export {
-    ExampleController,
-    ItemsListController,
+    InstagramProfiles,
     LoginController,
     MainController,
     MenuController,
-    ScreenController
+    ScreenController,
+    CmsController
 };

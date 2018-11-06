@@ -67,6 +67,7 @@
 
     .content {
       @include absolute($header-size, 0, 0, 0);
+      overflow: auto;
     }
   }
 
@@ -77,6 +78,7 @@
 
     .content {
       @include absolute(0, 0, 0, 0);
+      overflow: auto;
     }
   }
 
